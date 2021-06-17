@@ -15,11 +15,15 @@ const MessageSchema = new Schema({
     type: String,
     required: true
   },
-  uploads: [String],
+  /*uploads: [String],
   businessInquiry: Boolean,
   bugReport: Boolean,
-  feedback: Boolean,
-});
+  feedback: Boolean,*/
+},
+{
+  timestamps: true
+}
+);
 
 const MessageModel = model("Message", MessageSchema);
 
