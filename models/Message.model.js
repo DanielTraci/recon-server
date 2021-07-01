@@ -1,8 +1,8 @@
-const { Schema, model } = require("mongoose");
+const mongoose = require('mongoose');
 
 // Message Model Schema
 
-const MessageSchema = new Schema({
+let MessageSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -25,6 +25,6 @@ const MessageSchema = new Schema({
 }
 );
 
-const MessageModel = model("Message", MessageSchema);
+let MessageModel = mongoose.model("Message", MessageSchema);
 
 module.exports = MessageModel;
