@@ -15,10 +15,9 @@ let MessageSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  /*uploads: [String],
-  businessInquiry: Boolean,
   bugReport: Boolean,
-  feedback: Boolean,*/
+  businessInquiry: Boolean,
+  generalSubject: Boolean,
 },
 {
   timestamps: true

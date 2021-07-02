@@ -14,6 +14,18 @@ const app = express();
 // ℹ️ This function is getting exported from the config folder. It runs most middlewares
 require('./config')(app);
 
+
+// Body parser
+// https://www.npmjs.com/package/body-parser
+const bodyParser = require("body-parser")
+
+const cors = require("cors")
+const nodemailer = require("nodemailer")
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+app.use(cors())
+
 // 👇 Start handling routes here
 // Contrary to the views version, all routes are controled from the routes/index.js
 const allRoutes = require('./routes');
