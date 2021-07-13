@@ -7,6 +7,7 @@ const cors = require("cors")
 const nodemailer = require("nodemailer")
 
 // route
+// deploy ready
 router.post('/contact', cors(), async (req, res) => {
      const { name, email, subject, message } = req.body
      const myRegex = new RegExp(/^[a-z0-9](?!.*?[^\na-z0-9]{2})[^\s@]+@[^\s@]+\.[^\s@]+[a-z0-9]$/);
