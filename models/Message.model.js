@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 // Message Model Schema
-
 let MessageSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -11,13 +10,14 @@ let MessageSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  subject: {
+    type: String,
+    required: true
+  },
   message: {
     type: String,
     required: true
   },
-  bugReport: Boolean,
-  businessInquiry: Boolean,
-  generalSubject: Boolean,
 },
 {
   timestamps: true
